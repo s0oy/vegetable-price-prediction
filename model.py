@@ -11,8 +11,7 @@ import matplotlib.pyplot as plt
 # 1. 파일 경로 설정
 BASE_DIR = Path(__file__).resolve().parent
 
-OUTPUT_DIR = BASE_DIR / "results"
-OUTPUT_DIR.mkdir(exist_ok=True)
+OUTPUT_DIR = BASE_DIR
 
 # 2. 작물별로 두 지역 데이터 불러오기 + 병합
 def load_data(crop):
@@ -286,4 +285,4 @@ if __name__ == "__main__":
     for crop in ["cabbage", "radish"]:
         run_model(crop)
 
-    print("\n완료! results 폴더를 확인하세요.")
+    print("\n완료!")
